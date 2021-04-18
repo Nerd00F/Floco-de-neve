@@ -1,0 +1,118 @@
+/* corpo do documento */
+body {
+  background: #658cb3;
+}
+
+/* fundo do floco de neve */
+.canvas {
+  /* tamanho e posicao da div */
+  height: 350px;
+  width: 350px;
+  position: absolute;
+  /* centralizar div */
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  perspective: 500;
+  -webkit-perspective: 500px;
+}
+.container {
+  /* altura do container */
+  height: 350px;
+
+  /* modo 3d */
+  transform-style: preserve-3d;
+  /* tipo de animacao */
+  animation: spin 1.8s forwards linear infinite;
+}
+
+/* detalhes da animacao */
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* floco de neve */
+.floco {
+  /* cor, tamanho e posicao da div */
+  background-color: white;
+  height: 175px;
+  width: 10px;
+  position: relative;
+}
+
+/* galho superior */
+.a {
+  /* centralizar aro */
+  left: 170px;
+}
+
+/* extremidades */
+.g1, .g2 {
+  /* cor, tamanho e posicao da div */
+  background-color: white;
+  height: 40px;
+  width: 10px;
+  position: relative;
+}
+.g1 {
+  transform: rotate(45deg);
+  top: 5px;
+  left: 15px;
+}
+.g2 {
+  transform: rotate(-45deg);
+  right: 15px;
+  bottom: 36px;
+}
+
+/* centro */
+.g3, .g4 {
+  /* cor, tamanho e posicao da div */
+  background-color: white;
+  height: 75px;
+  width: 10px;
+  position: relative;
+}
+.g3 {
+  transform: rotate(45deg);
+  bottom: 10px;
+  left: 25px;
+}
+.g4 {
+  transform: rotate(-45deg);
+  bottom: 85px;
+  right: 25px;
+}
+
+/* outros galhos */
+/* sentido horario */
+.b {
+  transform: rotate(60deg);
+  bottom: 131px;
+  left: 247px;
+}
+.c {
+  transform: rotate(120deg);
+  bottom: 220px;
+  left: 246px;
+}
+.d {
+  transform: rotate(180deg);
+  bottom: 350px;
+  left: 170px;
+}
+.e {
+  transform: rotate(240deg);
+  bottom: 569px;
+  left: 95px;
+}
+.f {
+  transform: rotate(300deg);
+  bottom: 832px;
+  left: 95px;
+}
